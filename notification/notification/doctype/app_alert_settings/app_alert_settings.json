@@ -1,0 +1,86 @@
+{
+ "allow_copy": 1,
+ "creation": "2019-10-23 18:46:39.250397",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "notification_gateway_url",
+  "secret_key",
+  "app_id",
+  "channel_id",
+  "static_parameters_section",
+  "use_post",
+  "notification_url",
+  "section_break_6",
+  "keys"
+ ],
+ "fields": [
+  {
+   "fieldname": "notification_gateway_url",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Notification Gateway URL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "secret_key",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Secret Key "
+  },
+  {
+   "fieldname": "app_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "App Id"
+  },
+  {
+   "fieldname": "static_parameters_section",
+   "fieldtype": "Column Break",
+   "width": "50%"
+  },
+  {
+   "default": "0",
+   "fieldname": "use_post",
+   "fieldtype": "Check",
+   "label": "Use POST"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "keys",
+   "fieldtype": "Table",
+   "options": "App Notification Key"
+  },
+  {
+   "fieldname": "notification_url",
+   "fieldtype": "Data",
+   "label": "Notification Server Url"
+  },
+  {
+   "fieldname": "channel_id",
+   "fieldtype": "Data",
+   "label": "Channel Id"
+  }
+ ],
+ "icon": "fa fa-cog",
+ "issingle": 1,
+ "modified": "2021-04-27 19:57:08.116348",
+ "modified_by": "Administrator",
+ "module": "Notification",
+ "name": "App Alert Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

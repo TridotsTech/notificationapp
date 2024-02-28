@@ -1,0 +1,84 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"9YKi4bC41H\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Notifcations</span>\",\"col\":12}},{\"id\":\"m5EqJvGLVO\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"App Alert Settings\",\"col\":3}},{\"id\":\"6VumqZ1vrR\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"App Alert Devices\",\"col\":3}},{\"id\":\"dAqG6YTjnH\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"App Alerts\",\"col\":3}},{\"id\":\"0LBb1MicUk\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Notification History\",\"col\":3}},{\"id\":\"pXRpHQL_ND\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SMS Settings\",\"col\":3}},{\"id\":\"dgz74RWaug\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SMS Alerts\",\"col\":3}},{\"id\":\"L4yLKvXCu-\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"SMS Center Tool\",\"col\":3}},{\"id\":\"LYRlDLuSXA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Notification Center\",\"col\":3}}]",
+ "creation": "2023-07-06 13:52:25.585350",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "notification-with-indicator",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Notifcations",
+ "links": [],
+ "modified": "2023-07-06 13:56:54.741838",
+ "modified_by": "Administrator",
+ "module": "Notification",
+ "name": "Notifcations",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 13.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "App Alert Devices",
+   "link_to": "App Alert Device",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Notification History",
+   "link_to": "Notification History",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "SMS Settings",
+   "link_to": "SMS Settings",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "SMS Alerts",
+   "link_to": "SMS Alert",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "App Alerts",
+   "link_to": "App Alert",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "SMS Center Tool",
+   "link_to": "SMS Center Tool",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "App Alert Settings",
+   "link_to": "App Alert Settings",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Notification Center",
+   "link_to": "Notification Center",
+   "type": "DocType"
+  }
+ ],
+ "title": "Notifcations"
+}

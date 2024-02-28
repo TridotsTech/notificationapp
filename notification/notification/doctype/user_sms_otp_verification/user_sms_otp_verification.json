@@ -1,0 +1,76 @@
+{
+ "creation": "2023-01-11 13:45:12.669143",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user",
+  "expiry_on",
+  "is_sms_sent",
+  "column_break_3",
+  "phone_number",
+  "otp"
+ ],
+ "fields": [
+  {
+   "fieldname": "user",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "User",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "expiry_on",
+   "fieldtype": "Datetime",
+   "label": "Expiry On",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "otp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "OTP",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_sms_sent",
+   "fieldtype": "Check",
+   "label": "Is SMS Sent"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "label": "Phone Number",
+   "options": "Phone",
+   "reqd": 1
+  }
+ ],
+ "modified": "2023-01-11 16:10:48.749136",
+ "modified_by": "Administrator",
+ "module": "Notification",
+ "name": "User SMS OTP Verification",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

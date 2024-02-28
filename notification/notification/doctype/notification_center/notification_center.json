@@ -1,0 +1,201 @@
+{
+ "allow_copy": 1,
+ "creation": "2019-11-05 15:55:40.830407",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "send_to",
+  "add_filter",
+  "filter_html",
+  "filters_json",
+  "section_break_5",
+  "app_type",
+  "get_list",
+  "column_break_4",
+  "content_data",
+  "attachments_section",
+  "small_icon",
+  "column_break_8",
+  "large_icon",
+  "column_break_10",
+  "attach_image",
+  "section_break_12",
+  "url",
+  "items",
+  "receiver_list",
+  "party_list",
+  "column_break9",
+  "message",
+  "redirect_document",
+  "redirect_doc",
+  "total_characters",
+  "total_messages",
+  "send_notification"
+ ],
+ "fields": [
+  {
+   "fieldname": "send_to",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Send To",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "app_type",
+   "fieldtype": "Link",
+   "label": "App Type",
+   "options": "App Type"
+  },
+  {
+   "fieldname": "get_list",
+   "fieldtype": "Button",
+   "label": "Get Recipients List"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "content_data",
+   "fieldtype": "Data",
+   "label": "Subject"
+  },
+  {
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "small_icon",
+   "fieldtype": "Attach Image",
+   "label": "Small Icon"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "large_icon",
+   "fieldtype": "Attach Image",
+   "label": "Large Icon"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attach_image",
+   "fieldtype": "Attach Image",
+   "label": "Big Picture"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "Events",
+   "fieldname": "url",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Notification For",
+   "options": "\nGeneral\nEvents\nYellow Pages\nCommunity News"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Select",
+   "label": "Redirect Url"
+  },
+  {
+   "fieldname": "receiver_list",
+   "fieldtype": "Code",
+   "hidden": 1,
+   "label": "Receiver List"
+  },
+  {
+   "fieldname": "party_list",
+   "fieldtype": "Code",
+   "label": "User list"
+  },
+  {
+   "fieldname": "column_break9",
+   "fieldtype": "Column Break",
+   "width": "50%"
+  },
+  {
+   "description": "Messages greater than 160 characters will be split into multiple messages",
+   "fieldname": "message",
+   "fieldtype": "Text",
+   "label": "Message Content"
+  },
+  {
+   "fieldname": "total_characters",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Total Characters",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_messages",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Total Message(s)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "send_notification",
+   "fieldtype": "Button",
+   "label": "Send Notification",
+   "options": "send_sms"
+  },
+  {
+   "fieldname": "redirect_document",
+   "fieldtype": "Link",
+   "label": "Redirect Document Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "redirect_doc",
+   "fieldtype": "Dynamic Link",
+   "label": "Redirect Document Name",
+   "options": "redirect_document"
+  },
+  {
+   "fieldname": "add_filter",
+   "fieldtype": "Button",
+   "label": "Add Filter"
+  },
+  {
+   "default": "[]",
+   "fieldname": "filters_json",
+   "fieldtype": "Code",
+   "label": "Filters JSON"
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "filter_html",
+   "fieldtype": "HTML"
+  }
+ ],
+ "icon": "fa fa-mobile-phone",
+ "issingle": 1,
+ "modified": "2021-07-08 17:35:24.050637",
+ "modified_by": "Administrator",
+ "module": "Notification",
+ "name": "Notification Center",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "read_only": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

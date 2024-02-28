@@ -1,0 +1,271 @@
+{
+ "allow_rename": 1,
+ "autoname": "Prompt",
+ "creation": "2019-10-23 18:42:24.158762",
+ "doctype": "DocType",
+ "document_type": "System",
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "filters",
+  "subject",
+  "document_type",
+  "is_standard",
+  "allow_user_modify",
+  "module",
+  "app_type",
+  "col_break_1",
+  "event",
+  "method",
+  "date_changed",
+  "days_in_advance",
+  "value_changed",
+  "section_break_9",
+  "condition",
+  "column_break_6",
+  "html_7",
+  "property_section",
+  "set_property_after_alert",
+  "property_value",
+  "column_break_5",
+  "recipients",
+  "message_sb",
+  "message",
+  "attachments",
+  "small_icon",
+  "column_break_27",
+  "large_icon",
+  "column_break_28",
+  "attach_image",
+  "section_break_29",
+  "message_examples",
+  "view_properties"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "filters",
+   "fieldtype": "Section Break",
+   "label": "Filters"
+  },
+  {
+   "description": "To add dynamic subject, use jinja tags like\n\n<div><pre><code>{{ doc.name }} Delivered</code></pre></div>",
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "ignore_xss_filter": 1,
+   "in_list_view": 1,
+   "label": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Document Type",
+   "options": "DocType",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_standard",
+   "fieldtype": "Check",
+   "label": "Is Standard"
+  },
+  {
+   "depends_on": "is_standard",
+   "fieldname": "module",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Module",
+   "options": "Module Def"
+  },
+  {
+   "fieldname": "app_type",
+   "fieldtype": "Link",
+   "label": "App Type",
+   "options": "App Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "col_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "event",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Send Alert On",
+   "options": "\nNew\nSave\nSubmit\nCancel\nDays After\nDays Before\nValue Change\nMethod\nCustom",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "depends_on": "eval:doc.event=='Method'",
+   "description": "Trigger on valid methods like \"before_insert\", \"after_update\", etc (will depend on the DocType selected)",
+   "fieldname": "method",
+   "fieldtype": "Data",
+   "label": "Trigger Method"
+  },
+  {
+   "depends_on": "eval:doc.event==\"Days After\" || doc.event==\"Days Before\"",
+   "description": "Send alert if date matches this field's value",
+   "fieldname": "date_changed",
+   "fieldtype": "Select",
+   "label": "Reference Date"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.event==\"Days After\" || doc.event==\"Days Before\"",
+   "description": "Send days before or after the reference date",
+   "fieldname": "days_in_advance",
+   "fieldtype": "Int",
+   "label": "Days Before or After"
+  },
+  {
+   "depends_on": "eval:doc.event==\"Value Change\"",
+   "description": "Send alert if this field's value changes",
+   "fieldname": "value_changed",
+   "fieldtype": "Select",
+   "label": "Value Changed"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Optional: The alert will be sent if this expression is true",
+   "fieldname": "condition",
+   "fieldtype": "Code",
+   "ignore_xss_filter": 1,
+   "in_list_view": 1,
+   "label": "Condition"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "html_7",
+   "fieldtype": "HTML",
+   "options": "<p><strong>Condition Examples:</strong></p>\n<pre>doc.status==\"Open\"\ndoc.due_date==nowdate()\ndoc.total &gt; 40000\n</pre>\n<p><strong>Hints:</strong></p>\n<ol>\n<li>To check for an event every day, select \"Date Change\" in Event</li>\n<li>To send an alert if a particular value changes, select \"Value Change\"</li>\n</ol>"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "property_section",
+   "fieldtype": "Section Break",
+   "label": "Set Property After Alert"
+  },
+  {
+   "fieldname": "set_property_after_alert",
+   "fieldtype": "Select",
+   "label": "Set Property After Alert"
+  },
+  {
+   "fieldname": "property_value",
+   "fieldtype": "Data",
+   "label": "Value To Be Set"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Section Break",
+   "label": "Recipients"
+  },
+  {
+   "fieldname": "recipients",
+   "fieldtype": "Table",
+   "label": "Recipients",
+   "options": "App Alert Recipient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "message_sb",
+   "fieldtype": "Section Break",
+   "label": "Message"
+  },
+  {
+   "default": "Add your message here",
+   "fieldname": "message",
+   "fieldtype": "Code",
+   "ignore_xss_filter": 1,
+   "label": "Message"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Section Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "small_icon",
+   "fieldtype": "Attach Image",
+   "label": "Small Icon"
+  },
+  {
+   "fieldname": "column_break_27",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "large_icon",
+   "fieldtype": "Attach Image",
+   "label": "Large Icon"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "attach_image",
+   "fieldtype": "Attach Image",
+   "label": "Big Picture"
+  },
+  {
+   "fieldname": "section_break_29",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "message_examples",
+   "fieldtype": "HTML",
+   "label": "Message Examples",
+   "options": "<h5>Message Example</h5>\n\n<pre>&lt;h3&gt;Order Overdue&lt;/h3&gt;\n\n&lt;p&gt;Transaction {{ doc.name }} has exceeded Due Date. Please take necessary action.&lt;/p&gt;\n\n&lt;!-- show last comment --&gt;\n{% if comments %}\nLast comment: {{ comments[-1].comment }} by {{ comments[-1].by }}\n{% endif %}\n\n&lt;h4&gt;Details&lt;/h4&gt;\n\n&lt;ul&gt;\n&lt;li&gt;Customer: {{ doc.customer }}\n&lt;li&gt;Amount: {{ doc.total_amount }}\n&lt;/ul&gt;\n</pre>"
+  },
+  {
+   "fieldname": "view_properties",
+   "fieldtype": "Button",
+   "label": "View Properties (via Customize Form)"
+  },
+  {
+   "default": "0",
+   "fieldname": "allow_user_modify",
+   "fieldtype": "Check",
+   "label": "Allow User Modify"
+  }
+ ],
+ "icon": "fa fa-envelope",
+ "modified": "2021-02-19 07:58:41.222077",
+ "modified_by": "Administrator",
+ "module": "Notification",
+ "name": "App Alert",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "subject",
+ "track_changes": 1
+}
