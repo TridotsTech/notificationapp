@@ -1,4 +1,5 @@
 {
+ "actions": [],
  "creation": "2019-10-23 18:47:03.245719",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -7,8 +8,7 @@
   "app_type",
   "app_id",
   "secret_key",
-  "channel_id",
-  "business"
+  "channel_id"
  ],
  "fields": [
   {
@@ -34,25 +34,20 @@
    "reqd": 1
   },
   {
-   "fieldname": "business",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Business",
-   "options": "Business"
-  },
-  {
    "fieldname": "channel_id",
    "fieldtype": "Data",
    "label": "Channel Id"
   }
  ],
  "istable": 1,
- "modified": "2021-04-27 19:34:34.118922",
+ "links": [],
+ "modified": "2024-03-05 14:57:21.717642",
  "modified_by": "Administrator",
  "module": "Notification",
  "name": "App Notification Key",
  "owner": "Administrator",
  "permissions": [],
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "states": []
 }
