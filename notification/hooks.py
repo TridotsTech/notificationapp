@@ -92,12 +92,12 @@ doc_events = {
 	("Customers", "Drivers"): {
 		"on_update": "notification.notification.api.update_user_payer_id"
 	},
-	("Customers", "Drivers","Order","Vendor Orders","Discounts","Customer Registration","Business Registration","Business","Product", "Return Request", "Payment Entry", "Employee Target", "Lead", "Bin"):{
+	"*":{
 		"on_update": "notification.notification.api.send_app_alerts",
-        "on_update_after_submit": "notification.notification.api.send_app_alerts",
-		"after_insert": "notification.notification.api.send_app_alerts",
-		"on_submit": "notification.notification.api.send_app_alerts",
-		"on_cancel": "notification.notification.api.send_app_alerts",
+        # "on_update_after_submit": "notification.notification.api.send_app_alerts",
+		# "after_insert": "notification.notification.api.send_app_alerts",
+		# "on_submit": "notification.notification.api.send_app_alerts",
+		# "on_cancel": "notification.notification.api.send_app_alerts",
 	}
 }
 
